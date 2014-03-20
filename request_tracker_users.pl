@@ -41,7 +41,7 @@ export RT_HOME=/usr/share/request-tracker4
 U1=userlist.csv
 while read zeile; do
         set -- $zeile
-        echo "adding User: "$1 $2
+        echo "adding user: "$1 $2
         /usr/bin/perl creatertuser.pl $1 $2
 done<$U1
 
