@@ -1,3 +1,6 @@
+#main function
+
+
 #!/usr/bin/perl
 use strict;
 use warnings;
@@ -29,3 +32,19 @@ if ($id){
    }
 
 
+
+
+#usage of this 
+
+#!/bin/bash
+export RT_HOME=/usr/share/request-tracker4
+U1=userlist.csv
+while read zeile; do
+        set -- $zeile
+        echo "adding User: "$1 $2
+        /usr/bin/perl creatertuser.pl $1 $2
+done<$U1
+
+
+#need to create a simple csv file userlist.csv containing: username email
+#to run this using power shell: perl usagefile.pl
